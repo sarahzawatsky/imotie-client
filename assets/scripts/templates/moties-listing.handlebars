@@ -1,0 +1,34 @@
+{{#each moties as |motie|}}
+  {{log moties}}
+  <section data-id="{{motie.id}}">
+    <h1>emotion</h1>
+    <h1>intensity</h1>
+    <p>cause</p>
+    <p>appearance</p>
+    <p>solution</p>
+    <!-- <button data-id='{{motie.id}}' class="btn btn-danger delete-button">delete motie</button> -->
+  </section>
+
+{{/each}}
+
+
+<!-- {{#each books as |book|}}
+  {{log book}}
+  <section data-id="{{book.id}}">
+    <h6>Title:</h6>
+    <h3>
+      {{limit book.title 15}}
+    </h3>
+    <h6>Author:</h6>
+    <p>
+      {{#if book.author}}
+        {{book.author}}
+      {{else}}
+        No author provided.
+      {{/if}}
+    </p>
+    <button data-id='{{book.id}}' class="btn btn-danger delete-button">Remove</button> -->
+
+  <!-- </section>
+
+{{/each}} -->

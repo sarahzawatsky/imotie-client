@@ -68,11 +68,24 @@ const seeAllMoties = function (data) {
   })
 }
 
+// EDIT A MOTIE
+const editMotie = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/moties/' + store.motie.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   createMotie,
-  seeAllMoties
+  seeAllMoties,
+  editMotie
 }

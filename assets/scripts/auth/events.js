@@ -46,16 +46,6 @@ const onSignOut = function (event) {
     .catch(ui.failure)
 }
 
-// // SELECT FEELINGS
-// const onSelectEmotion = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//
-//   api.createMotie(data)
-//     .then(ui.selectEmotionSuccess)
-//     .catch(ui.failure)
-// }
-
 // SUBMIT MOTIE
 const onSubmitMotie = function (event) {
   event.preventDefault()
@@ -69,21 +59,20 @@ const onSubmitMotie = function (event) {
 // SEE ALL MOTIES
 const onSeeAllMoties = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
 
-  api.seeAllMoties(data)
+  api.seeAllMoties()
     .then(ui.seeAllMotiesSuccess)
     .catch(ui.failure)
 }
-//
-// // EDIT A MOTIE
-// const onEditMotie = function (event) {
-//   event.preventDefault()
-//
-//   api.seeAllMoties()
-//     .then(ui.editMotieSuccess)
-//     .catch(ui.failure)
-// }
+
+// EDIT A MOTIE
+const onEditMotie = function (event) {
+  event.preventDefault()
+
+  api.editMotie()
+    .then(ui.editMotieSuccess)
+    .catch(ui.failure)
+}
 
 module.exports = {
   onSignUp,
@@ -91,6 +80,6 @@ module.exports = {
   changePassword,
   onSignOut,
   onSubmitMotie,
-  onSeeAllMoties
-  // onEditMotie
+  onSeeAllMoties,
+  onEditMotie
 }

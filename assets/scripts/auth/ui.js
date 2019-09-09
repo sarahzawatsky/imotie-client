@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('../store')
-
+const seeMotiesTemplate = require('../templates/moties-listing.handlebars')
 // FEATURES UPON SUCCESS AND FAILURE\
 
 // UPON SUCCESSFUL SIGN-UP
@@ -38,13 +38,6 @@ const signOutSuccess = function () {
   $('.settings').hide()
 }
 
-// // UPON SUCCESSFUL SELECTION OF EMOTION
-// const selectEmotionSuccess = function () {
-//   $('#select-emotion').trigger('reset')
-//   $('#message').text('You have selected an emotion.  How would you rate your emotion?')
-//   // STRETCH: identify which emotion was selected anad offer a specific, tailored message.
-// }
-
 // UPON SUCCESSFUL SUBMISSION OF MOTIE
 const submitMotieSuccess = function () {
   $('#submit-motie').trigger('reset')
@@ -52,16 +45,19 @@ const submitMotieSuccess = function () {
 }
 
 // UPON SUCCESSFUL VIEWING OF ALL MOTIES
-const seeAllMotiesSuccess = function () {
+const seeAllMotiesSuccess = function (data) {
+  console.log(data)
+  const showMotiesHtml = seeMotiesTemplate({moties: data.moties})
+  $('.content').append(showMotiesHtml)
+  // store.moties = data
+  // $('#message').text('Here are your past moties' + store.moties)
+}
+
+// UPON SUCCESSFUL EDITING OF A MOTIE
+const editMotieSuccess = function () {
   $('#all-moties').trigger('reset')
   $('#message').text('Here are your past moties')
 }
-//
-// // UPON SUCCESSFUL EDITING OF A MOTIE
-// const editMotieSuccess = function () {
-//   $('#all-moties').trigger('reset')
-//   $('#message').text('Here are your past moties')
-// }
 
 // UPON UNSUCCESSFUL USE OF FEATURE
 const failure = function () {
@@ -78,5 +74,6 @@ module.exports = {
   signOutSuccess,
   submitMotieSuccess,
   seeAllMotiesSuccess,
+  editMotieSuccess,
   failure
 }
