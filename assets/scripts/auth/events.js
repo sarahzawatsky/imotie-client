@@ -6,6 +6,7 @@ const ui = require('./ui')
 // const store = require('../store')
 
 // EVENT HANDLERS
+
 // SIGN UP
 const onSignUp = function (event) {
   event.preventDefault()
@@ -45,9 +46,19 @@ const onSignOut = function (event) {
     .catch(ui.failure)
 }
 
+// SIGN OUT
+const onSelectFeelings = function (event) {
+  event.preventDefault()
+
+  api.emotionSubmit()
+    .then(ui.selectFeelingsSuccess)
+    .catch(ui.failure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   changePassword,
-  onSignOut
+  onSignOut,
+  onSelectFeelings
 }

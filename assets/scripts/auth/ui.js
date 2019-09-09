@@ -32,6 +32,24 @@ const changePasswordSuccess = function () {
   // $('#message').addClass('success') // CSS CLASS FOR STYLING
 }
 
+// UPON SUCCESSFUL SIGN-OUT
+const signOutSuccess = function () {
+  store.user = null
+  $('#message').text('You have successfully signed out.')
+  $('#sign-up').show()
+  $('#sign-in').show()
+  $('#change-password').hide()
+  $('#sign-out').hide()
+}
+
+// UPON SUCCESSFUL SELECTION OF FEELINGS
+const selectFeelingsSuccess = function () {
+  $('#change-password').trigger('reset')
+  $('#message').text('Password successfully changed!')
+  // $('#message').removeClass()
+  // $('#message').addClass('success') // CSS CLASS FOR STYLING
+}
+
 // UPON UNSUCCESSFUL USE OF FEATURE
 const failure = function () {
   $('#message').text('Error! Try again!')
@@ -44,5 +62,7 @@ module.exports = {
   signUpSuccess,
   signInSuccess,
   changePasswordSuccess,
+  signOutSuccess,
+  selectFeelingsSuccess,
   failure
 }
