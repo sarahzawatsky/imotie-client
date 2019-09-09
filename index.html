@@ -18,7 +18,7 @@
       <div id="signed-in-user"></div>
       <div id="message"></div>
 
-    <!-- SIGN UP FORM-->
+    <!--SIGN UP FORM-->
     <form id='sign-up' class='border'>
       <fieldset>
         <legend class='heading'>create a new account</legend>
@@ -30,14 +30,33 @@
     </form>
 
 
-    <!--   SIGN IN FORM-->
+    <!--SIGN IN FORM-->
     <form id='sign-in' class='border'>
-        <fieldset>
-          <legend class='heading'>returning? sign in</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" value="sign in">
-        </fieldset>
-      </form>
+      <fieldset>
+        <legend class='heading'>returning? sign in</legend>
+        <input type="text" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="submit" value="sign in">
+      </fieldset>
+    </form>
+
+
+    <!--CHANGE PASSWORD FORM-->
+    <form id='change-password' class='border'>
+      <fieldset>
+        <legend>change Password</legend>
+        <input type="password" name="passwords[old]" placeholder="old password">
+        <input type="password" name="passwords[new]" placeholder="new password">
+        <input type="submit" value="change password">
+      </fieldset>
+    </form>
+
+    <!--SIGN-OUT BUTTON-->
+    <form id='sign-out' class='border'>
+      <fieldset>
+        <legend>sign out</legend>
+        <input type="submit" value='sign out'>
+      </fieldset>
+    </form>
   </body>
 </html>
