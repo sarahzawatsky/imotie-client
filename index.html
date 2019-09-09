@@ -40,7 +40,7 @@
       </fieldset>
     </form>
 
-<!--SETTINGS CLASS-->
+  <!--SETTINGS CLASS-->
   <div class="settings">
 
     <!--CHANGE PASSWORD FORM-->
@@ -62,65 +62,71 @@
     </form>
   </div>
 
-<!-- MOTIE CLASS -->
+  <!--SEE PAST MOTIES BUTTON-->
+<div class="old-moties">
+
+  <form id='all-moties' class='border'>
+    <fieldset>
+      <legend>see my moties</legend>
+      <input type="submit" value='see my moties'>
+    </fieldset>
+  </form>
+
+  <!-- <form id='edit-motie' class='border'>
+    <fieldset>
+      <legend>edit a motie</legend>
+      <input type="submit" value='edit a motie'>
+    </fieldset>
+  </form> -->
+
+  <!-- <form id='delete-moties' class='border'>
+    <fieldset>
+      <legend>delete a motie</legend>
+      <input type="submit" value='delete a motie'>
+    </fieldset>
+  </form> -->
+
+</div>
+
+  <!-- MOTIE CLASS -->
   <div class="motie">
 
-    <form id='motie' class='border'> <!--action="/action_page.php">-->
+    <form id='submit-motie' class='border'>
       <fieldset>
+
         <!--FEELINGS SELECTIONS-->
         <legend>select a word for how you're feeling</legend>
-        <!--<form action="">-->
-          <input type="radio" name="emotion" value="angry"> angry
-          <input type="radio" name="emotion" value="frustrated"> frustrated
-          <input type="radio" name="emotion" value="anxious"> anxious
-          <input type="radio" name="emotion" value="worried"> worried
-          <input type="radio" name="emotion" value="sad"> sad
-          <input type="radio" name="emotion" value="uncomfortable"> uncomfortable
-          <input type="radio" name="emotion" value="happy"> happy
-          <input type="radio" name="emotion" value="content"> content
-      <!-- </fieldset>
-    </form> -->
+          <input type="radio" name="moty[emotion]" value="angry"> angry
+          <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
+          <input type="radio" name="moty[emotion]" value="anxious"> anxious
+          <input type="radio" name="moty[emotion]" value="worried"> worried
+          <input type="radio" name="moty[emotion]" value="sad"> sad
+          <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
+          <input type="radio" name="moty[emotion]" value="happy"> happy
+          <input type="radio" name="moty[emotion]" value="content"> content
 
     <!--SELECT INTENSITY-->
-    <!-- <form id='select-intensity' class='border'> <!--action="/action_page.php">-->
-      <!-- <fieldset>  -->
         <legend>how would you rate your feelings?</legend>
-        <input type="radio" name="scale" value="5">5
-        <input type="radio" name="scale" value="4">4
-        <input type="radio" name="scale" value="3">3
-        <input type="radio" name="scale" value="2">2
-        <input type="radio" name="scale" value="1">1
-      <!-- </fieldset>
-    </form> -->
+        <input type="radio" name="moty[intensity]" value="5">5
+        <input type="radio" name="moty[intensity]" value="4">4
+        <input type="radio" name="moty[intensity]" value="3">3
+        <input type="radio" name="moty[intensity]" value="2">2
+        <input type="radio" name="moty[intensity]" value="1">1
 
     <!--DESCRIBE CAUSE-->
-    <!--<form action="/action_page.php">-->
-    <!-- <form id='describe-cause' class='border'>
-      <fieldset> -->
-        <textarea name="message" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
-      <!-- </fieldset>
-    </form> -->
+        <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
 
     <!--DESCRIBE APPEARANCE-->
-    <!--<form action="/action_page.php">-->
-    <!-- <form id='describe-appearance' class='border'>
-      <fieldset> -->
-        <textarea name="message" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
-      <!-- </fieldset>
-    </form> -->
+        <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
 
     <!--DESCRIBE SOLUTIONS-->
-    <!--<form action="/action_page.php">-->
-    <!-- <form id='describe-solutions' class='border'>
-      <fieldset> -->
-        <textarea name="message" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
-      <!-- </fieldset>
-    </form> -->
+        <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
 
-    <input id="submit-motie" type="submit">
+    <!--SUBMIT MOTIE-->
+      <input type="submit">
 
-  </fieldset>
-</form>
-  </div>
-  </body>
+    </fieldset>
+  </form>
+</div>
+</body>
 </html>

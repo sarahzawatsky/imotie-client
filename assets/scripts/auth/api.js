@@ -44,23 +44,27 @@ const signOut = function () {
   })
 }
 
-// CREATE MOTIE
-const createMotie = function (emotion, intensity, cause, appearance, solution) {
+// SUBMIT A NEW MOTIE
+const createMotie = function (data) {
   return $.ajax({
     url: config.apiUrl + '/moties',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      moties: {
-        emotion: emotion,
-        intensity: intensity,
-        cause: cause,
-        appearance: appearance,
-        solution: solution
-      }
-    }
+    data: data
+  })
+}
+
+// SEE ALL MOTIES
+const seeAllMoties = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/moties',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
   })
 }
 
@@ -69,5 +73,6 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  createMotie
+  createMotie,
+  seeAllMoties
 }
