@@ -14,12 +14,9 @@ const signUpSuccess = function (data) {
 const signInSuccess = function (data) {
   store.user = data.user
   $('#sign-in').trigger('reset')
-  $('#message').text('Hello!  How are you feeling today?')
-  // $('#grid').hide()
-  // $('#stats').show()
-  // $('#games').show()
-  $('#sign-out').show()
-  $('#change-password').show()
+  $('#message').text('hello!  how are you feeling today?')
+  $('.settings').show()
+  $('.motie').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
 }
@@ -28,8 +25,6 @@ const signInSuccess = function (data) {
 const changePasswordSuccess = function () {
   $('#change-password').trigger('reset')
   $('#message').text('Password successfully changed!')
-  // $('#message').removeClass()
-  // $('#message').addClass('success') // CSS CLASS FOR STYLING
 }
 
 // UPON SUCCESSFUL SIGN-OUT
@@ -38,16 +33,15 @@ const signOutSuccess = function () {
   $('#message').text('You have successfully signed out.')
   $('#sign-up').show()
   $('#sign-in').show()
-  $('#change-password').hide()
-  $('#sign-out').hide()
+  $('.motie').hide()
+  $('.settings').hide()
 }
 
-// UPON SUCCESSFUL SELECTION OF FEELINGS
-const selectFeelingsSuccess = function () {
-  $('#change-password').trigger('reset')
-  $('#message').text('Password successfully changed!')
-  // $('#message').removeClass()
-  // $('#message').addClass('success') // CSS CLASS FOR STYLING
+// UPON SUCCESSFUL SELECTION OF EMOTION
+const selectEmotionSuccess = function () {
+  $('#select-emotion').trigger('reset')
+  $('#message').text('You have selected an emotion.  How would you rate your emotion?')
+  // STRETCH: identify which emotion was selected anad offer a specific, tailored message.
 }
 
 // UPON UNSUCCESSFUL USE OF FEATURE
@@ -63,6 +57,6 @@ module.exports = {
   signInSuccess,
   changePasswordSuccess,
   signOutSuccess,
-  selectFeelingsSuccess,
+  selectEmotionSuccess,
   failure
 }

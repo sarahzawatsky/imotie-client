@@ -46,12 +46,12 @@ const onSignOut = function (event) {
     .catch(ui.failure)
 }
 
-// SIGN OUT
-const onSelectFeelings = function (event) {
+// SELECT FEELINGS
+const onSelectEmotion = function (event) {
   event.preventDefault()
 
-  api.emotionSubmit()
-    .then(ui.selectFeelingsSuccess)
+  api.createMotie()
+    .then(ui.selectEmotionSuccess)
     .catch(ui.failure)
 }
 
@@ -60,5 +60,5 @@ module.exports = {
   onSignIn,
   changePassword,
   onSignOut,
-  onSelectFeelings
+  onSelectEmotion
 }

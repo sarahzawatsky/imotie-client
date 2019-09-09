@@ -44,11 +44,11 @@ const signOut = function () {
   })
 }
 
-// SELECT FEELINGS
-const selectFeelings = function (data) {
+// CREATE MOTIE
+const createMotie = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/change-password',
-    method: 'PATCH',
+    url: config.apiUrl + '/moties',
+    method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -56,11 +56,10 @@ const selectFeelings = function (data) {
   })
 }
 
-
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  selectFeelings
+  createMotie
 }
