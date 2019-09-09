@@ -62,63 +62,65 @@
     </form>
   </div>
 
-<!--MOTIE CLASS-->
+<!-- MOTIE CLASS -->
   <div class="motie">
-    <!--FEELINGS SELECTIONS-->
-    <form id='select-emotion' class='border'> <!--action="/action_page.php">-->
+
+    <form id='motie' class='border'> <!--action="/action_page.php">-->
       <fieldset>
+        <!--FEELINGS SELECTIONS-->
         <legend>select a word for how you're feeling</legend>
         <!--<form action="">-->
-          <input type="radio" name="emotion" value="angry">angry
-          <input type="radio" name="emotion" value="frustrated">frustrated
-          <input type="radio" name="emotion" value="anxious">anxious
-          <input type="radio" name="emotion" value="worried">worried
-          <input type="radio" name="emotion" value="sad">sad
-          <input type="radio" name="emotion" value="uncomfortable">uncomfortable
-          <input type="radio" name="emotion" value="happy">happy
-          <input type="radio" name="emotion" value="content">content
-        </form>
-      </fieldset>
-    </form>
+          <input type="radio" name="emotion" value="angry"> angry
+          <input type="radio" name="emotion" value="frustrated"> frustrated
+          <input type="radio" name="emotion" value="anxious"> anxious
+          <input type="radio" name="emotion" value="worried"> worried
+          <input type="radio" name="emotion" value="sad"> sad
+          <input type="radio" name="emotion" value="uncomfortable"> uncomfortable
+          <input type="radio" name="emotion" value="happy"> happy
+          <input type="radio" name="emotion" value="content"> content
+      <!-- </fieldset>
+    </form> -->
 
     <!--SELECT INTENSITY-->
-    <form id='select-intensity' class='border'> <!--action="/action_page.php">-->
-      <fieldset>
+    <!-- <form id='select-intensity' class='border'> <!--action="/action_page.php">-->
+      <!-- <fieldset>  -->
         <legend>how would you rate your feelings?</legend>
         <input type="radio" name="scale" value="5">5
         <input type="radio" name="scale" value="4">4
         <input type="radio" name="scale" value="3">3
         <input type="radio" name="scale" value="2">2
         <input type="radio" name="scale" value="1">1
-      </form>
-      </fieldset>
-    </form>
+      <!-- </fieldset>
+    </form> -->
 
     <!--DESCRIBE CAUSE-->
     <!--<form action="/action_page.php">-->
-    <form id='describe-cause' class='border'>
-      <fieldset>
+    <!-- <form id='describe-cause' class='border'>
+      <fieldset> -->
         <textarea name="message" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
-      </fieldset>
-    </form>
+      <!-- </fieldset>
+    </form> -->
 
     <!--DESCRIBE APPEARANCE-->
     <!--<form action="/action_page.php">-->
-    <form id='describe-appearance' class='border'>
-      <fieldset>
+    <!-- <form id='describe-appearance' class='border'>
+      <fieldset> -->
         <textarea name="message" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
-      </fieldset>
-    </form>
+      <!-- </fieldset>
+    </form> -->
 
     <!--DESCRIBE SOLUTIONS-->
     <!--<form action="/action_page.php">-->
-    <form id='describe-solutions' class='border'>
-      <fieldset>
+    <!-- <form id='describe-solutions' class='border'>
+      <fieldset> -->
         <textarea name="message" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
-      </fieldset>
-    </form>
+      <!-- </fieldset>
+    </form> -->
 
-    <input type="submit">
+    <input id="submit-motie" type="submit">
+
+  </fieldset>
+</form>
   </div>
   </body>
 </html>

@@ -14,6 +14,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.changePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#select-emotion').on('submit', authEvents.onSelectEmotion)
+  $('#submit-motie').on('submit', authEvents.onSubmitMotie)
   $('.settings').hide()
   $('.motie').hide()
 })

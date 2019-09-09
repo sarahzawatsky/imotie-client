@@ -55,10 +55,19 @@ const onSelectEmotion = function (event) {
     .catch(ui.failure)
 }
 
+// SUBMIT MOTIE
+const onSubmitMotie = function (event) {
+  event.preventDefault()
+
+  api.createMotie()
+    .then(ui.submitMotieSuccess)
+    .catch(ui.failure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
   changePassword,
   onSignOut,
-  onSelectEmotion
+  onSelectEmotion,
+  onSubmitMotie
 }

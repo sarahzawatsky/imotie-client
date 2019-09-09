@@ -45,14 +45,22 @@ const signOut = function () {
 }
 
 // CREATE MOTIE
-const createMotie = function (data) {
+const createMotie = function (emotion, intensity, cause, appearance, solution) {
   return $.ajax({
     url: config.apiUrl + '/moties',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data: {
+      moties: {
+        emotion: emotion,
+        intensity: intensity,
+        cause: cause,
+        appearance: appearance,
+        solution: solution
+      }
+    }
   })
 }
 

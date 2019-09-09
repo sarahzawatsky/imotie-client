@@ -44,6 +44,12 @@ const selectEmotionSuccess = function () {
   // STRETCH: identify which emotion was selected anad offer a specific, tailored message.
 }
 
+// UPON SUCCESSFUL SUBMISSION OF MOTIE
+const submitMotieSuccess = function () {
+  $('#submit-motie').trigger('reset')
+  $('#message').text('Your motie was submitted!')
+}
+
 // UPON UNSUCCESSFUL USE OF FEATURE
 const failure = function () {
   $('#message').text('Error! Try again!')
@@ -58,5 +64,6 @@ module.exports = {
   changePasswordSuccess,
   signOutSuccess,
   selectEmotionSuccess,
+  submitMotieSuccess,
   failure
 }
