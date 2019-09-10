@@ -39,7 +39,7 @@ const signOut = function () {
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token=' + store.user.token // accessing the token from store that we added onto store in ui.js
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }

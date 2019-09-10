@@ -19,4 +19,5 @@ $(() => {
   $('.settings').hide()
   $('.motie').hide()
   $('.old-moties').hide()
+  // $('.content').hide()
 })

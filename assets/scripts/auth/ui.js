@@ -18,6 +18,8 @@ const signInSuccess = function (data) {
   $('.settings').show()
   $('.motie').show()
   $('.old-moties').show()
+  // $('.content').show()
+  $('.content').hide()
   $('#sign-up').hide()
   $('#sign-in').hide()
 }
@@ -36,6 +38,8 @@ const signOutSuccess = function () {
   $('#sign-in').show()
   $('.motie').hide()
   $('.settings').hide()
+  $('.content').hide()
+  $('.old-moties').hide()
 }
 
 // UPON SUCCESSFUL SUBMISSION OF MOTIE
@@ -47,8 +51,9 @@ const submitMotieSuccess = function () {
 // UPON SUCCESSFUL VIEWING OF ALL MOTIES
 const seeAllMotiesSuccess = function (data) {
   console.log(data)
-  const showMotiesHtml = seeMotiesTemplate({moties: data.moties})
+  const showMotiesHtml = seeMotiesTemplate({moties: data})
   $('.content').append(showMotiesHtml)
+  $('.content').show()
   // store.moties = data
   // $('#message').text('Here are your past moties' + store.moties)
 }
