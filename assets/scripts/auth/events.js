@@ -67,11 +67,9 @@ const onSeeAllMoties = function (event) {
 
 // DELETE A MOTIE
 const onDeleteMotie = (event) => {
-  console.log('delete button responds to clicks')
   event.preventDefault()
   const data = event.currentTarget.dataset
-  console.log('delete data', data)
-  // $(event.target).data('id')
+
   api.deleteMotie(data)
     .then(() => onSeeAllMoties(event))
     .then(ui.deleteMotieSuccess)
@@ -80,10 +78,11 @@ const onDeleteMotie = (event) => {
 
 // EDIT A MOTIE
 const onEditMotie = function (event) {
-  console.log('edit button responds to click')
   event.preventDefault()
+  const data = event.currentTarget.dataset
+  console.log('edit data', data)
 
-  api.editMotie()
+  api.editMotie(data)
     .then(ui.editMotieSuccess)
     .catch(ui.failure)
 }

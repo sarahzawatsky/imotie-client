@@ -134,5 +134,69 @@
   </form>
 </div>
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+  edit motie
+</button>
+
+<!-- EDIT MOTIE MODAL -->
+<div class="edit-modal">
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">edit motie</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <form id='resubmit-motie' class='border'>
+            <fieldset>
+
+              <!--FEELINGS SELECTIONS-->
+              <legend>select a word for how you're feeling</legend>
+                <input type="radio" name="moty[emotion]" value="angry"> angry
+                <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
+                <input type="radio" name="moty[emotion]" value="anxious"> anxious
+                <input type="radio" name="moty[emotion]" value="worried"> worried
+                <input type="radio" name="moty[emotion]" value="sad"> sad
+                <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
+                <input type="radio" name="moty[emotion]" value="happy"> happy
+                <input type="radio" name="moty[emotion]" value="content"> content
+
+          <!--SELECT INTENSITY-->
+              <legend>how would you rate your feelings?</legend>
+              <input type="radio" name="moty[intensity]" value="5">5
+              <input type="radio" name="moty[intensity]" value="4">4
+              <input type="radio" name="moty[intensity]" value="3">3
+              <input type="radio" name="moty[intensity]" value="2">2
+              <input type="radio" name="moty[intensity]" value="1">1
+
+          <!--DESCRIBE CAUSE-->
+              <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
+
+          <!--DESCRIBE APPEARANCE-->
+              <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
+
+          <!--DESCRIBE SOLUTIONS-->
+              <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
+
+          </fieldset>
+        </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+
+                        <!-- THIS NEEDS TO BE UPDATE BUTTON FORM -->
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

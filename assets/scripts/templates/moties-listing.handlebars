@@ -8,7 +8,12 @@
     <p>solution: {{motie.solution}}</p>
 
     <button data-id="{{motie.id}}" class="btn btn-danger delete-button">delete motie</button>
-    <button data-id="{{motie.id}}" class="btn btn-warning edit-button">edit motie</button>
-  </section>
+
+
+<!-- SAVE CHANGES BUTTON NEEDS TO ACTUALLY BE THE SUBMIT BUTTON -->
+
+  <button data-id="{{motie.id}}" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+    edit motie
+  </button>
 
 {{/each}}
