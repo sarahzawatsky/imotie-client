@@ -11,13 +11,20 @@ const authEvents = require('./auth/events')
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
+
   $('#change-password').on('submit', authEvents.changePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+
   $('#submit-motie').on('submit', authEvents.onSubmitMotie)
   $('#all-moties').on('submit', authEvents.onSeeAllMoties)
-  $('#edit-motie').on('submit', authEvents.onEditMotie)
+
+  // $('#edit-motie').on('submit', authEvents.onEditMotie)
+
+  $('.content').on('click', '.delete-button', authEvents.onDeleteMotie)
+  $('.content').on('click', '.edit-button', authEvents.onEditMotie)
+
   $('.settings').hide()
   $('.motie').hide()
   $('.old-moties').hide()
-  // $('.content').hide()
+  $('.content').hide()
 })

@@ -56,7 +56,7 @@ const onSubmitMotie = function (event) {
     .catch(ui.failure)
 }
 
-// SEE ALL MOTIES
+// SEE ALL MOTIES -- CURRENTLY ABLE TO SEE ALL PAST LOGINS MOTIE HISTORY. NEEDS TO CLEAR ON SIGN OUT
 const onSeeAllMoties = function (event) {
   event.preventDefault()
 
@@ -65,8 +65,22 @@ const onSeeAllMoties = function (event) {
     .catch(ui.failure)
 }
 
+// DELETE A MOTIE
+const onDeleteMotie = (event) => {
+  console.log('delete button responds to clicks')
+  event.preventDefault()
+  const data = event.currentTarget.dataset
+  console.log('delete data', data)
+  // $(event.target).data('id')
+  api.deleteMotie(data)
+    .then(() => onSeeAllMoties(event))
+    .then(ui.deleteMotieSuccess)
+    .catch(ui.failure)
+}
+
 // EDIT A MOTIE
 const onEditMotie = function (event) {
+  console.log('edit button responds to click')
   event.preventDefault()
 
   api.editMotie()
@@ -81,5 +95,6 @@ module.exports = {
   onSignOut,
   onSubmitMotie,
   onSeeAllMoties,
-  onEditMotie
+  onEditMotie,
+  onDeleteMotie
 }

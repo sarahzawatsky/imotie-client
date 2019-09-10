@@ -80,6 +80,17 @@ const editMotie = function (data) {
   })
 }
 
+// DELETE A MOTIE
+const deleteMotie = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/moties/' + data.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -87,5 +98,6 @@ module.exports = {
   signOut,
   createMotie,
   seeAllMoties,
-  editMotie
+  editMotie,
+  deleteMotie
 }

@@ -39,6 +39,7 @@ const signOutSuccess = function () {
   $('.motie').hide()
   $('.settings').hide()
   $('.content').hide()
+  $('.content').empty()
   $('.old-moties').hide()
 }
 
@@ -50,12 +51,19 @@ const submitMotieSuccess = function () {
 
 // UPON SUCCESSFUL VIEWING OF ALL MOTIES
 const seeAllMotiesSuccess = function (data) {
+  $('.content').empty()
   console.log(data)
   const showMotiesHtml = seeMotiesTemplate({moties: data})
   $('.content').append(showMotiesHtml)
   $('.content').show()
   // store.moties = data
-  // $('#message').text('Here are your past moties' + store.moties)
+  // $('#message').text('your moties')
+}
+
+// UPON SUCCESSFUL DELETION OF A MOTIE
+const deleteMotieSuccess = function () {
+  // $('#all-moties').trigger('reset')
+  $('#message').text('motie deleted')
 }
 
 // UPON SUCCESSFUL EDITING OF A MOTIE
@@ -79,6 +87,7 @@ module.exports = {
   signOutSuccess,
   submitMotieSuccess,
   seeAllMotiesSuccess,
+  deleteMotieSuccess,
   editMotieSuccess,
   failure
 }
