@@ -58,7 +58,6 @@ const submitMotieSuccess = function () {
 // UPON SUCCESSFUL VIEWING OF ALL MOTIES
 const seeAllMotiesSuccess = function (data) {
   $('.content').empty()
-  console.log(data)
   const showMotiesHtml = seeMotiesTemplate({moties: data})
   $('.content').append(showMotiesHtml)
   $('.content').show()

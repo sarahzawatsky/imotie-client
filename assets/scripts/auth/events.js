@@ -81,16 +81,6 @@ const onSubmitMotie = function (event) {
 const onSeeAllMoties = function (event) {
   event.preventDefault()
 
-//   const data = event.target.dataset
-//   $("DATA").sort(function(a, b) {
-//     if (a.id < b.id) {
-//       return -1;
-//     } else {
-//       return 1;
-//     }
-//   }).each(function () { console.log($(this).attr("id"))
-// }
-
   $('.settings').hide()
   $('.motie').hide()
   $('.about').hide()
@@ -115,7 +105,6 @@ const onDeleteMotie = (event) => {
 const onEditMotie = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('edit data', data)
 
   api.editMotie(data)
     .then(() => onSeeAllMoties(event))
