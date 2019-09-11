@@ -63,6 +63,7 @@ const onSeeMotieForm = function (event) {
   $('.motie').show()
   $('.settings').hide()
   $('.content').hide()
+  $('.about').hide()
   $('#message').text('create a motie')
 }
 
