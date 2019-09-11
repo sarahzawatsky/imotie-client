@@ -53,6 +53,7 @@ const onSeeSettings = function (event) {
   $('.settings').show()
   $('.content').hide()
   $('.motie').hide()
+  $('.about').hide()
   $('#message').text('your settings')
 }
 
@@ -79,8 +80,19 @@ const onSubmitMotie = function (event) {
 const onSeeAllMoties = function (event) {
   event.preventDefault()
 
+//   const data = event.target.dataset
+//   $("DATA").sort(function(a, b) {
+//     if (a.id < b.id) {
+//       return -1;
+//     } else {
+//       return 1;
+//     }
+//   }).each(function () { console.log($(this).attr("id"))
+// }
+
   $('.settings').hide()
   $('.motie').hide()
+  $('.about').hide()
 
   api.seeAllMoties()
     .then(ui.seeAllMotiesSuccess)
@@ -117,6 +129,17 @@ const onOpenModal = function (event) {
   console.log(id)
   $('#motie-id').val(id)
   $('#motie-modal').modal('show')
+  $('#motie-modal').trigger('reset')
+}
+
+// ABOUT IMOTIE
+const onAbout = function (event) {
+  event.preventDefault()
+  $('.motie').hide()
+  $('.settings').hide()
+  $('.content').hide()
+  $('.about').show()
+  $('#message').text('about imotie')
 }
 
 module.exports = {
@@ -130,5 +153,6 @@ module.exports = {
   onDeleteMotie,
   onOpenModal,
   onSeeSettings,
-  onSeeMotieForm
+  onSeeMotieForm,
+  onAbout
 }

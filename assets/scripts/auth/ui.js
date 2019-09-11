@@ -24,6 +24,8 @@ const signInSuccess = function (data) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('.settings').hide()
+  $('.about').hide()
+  $('.welcome').hide()
 }
 
 // UPON SUCCESSFUL PASSWORD CHANGE
@@ -44,6 +46,7 @@ const signOutSuccess = function () {
   $('.content').empty()
   $('.old-moties').hide()
   $('#imotie-navbar').hide()
+  $('.about').hide()
 }
 
 // UPON SUCCESSFUL SUBMISSION OF MOTIE
@@ -71,9 +74,11 @@ const deleteMotieSuccess = function () {
 
 // UPON SUCCESSFUL EDITING OF A MOTIE
 const editMotieSuccess = function () {
-  $('#all-moties').trigger('reset')
   $('#message').text('successfully edited motie')
   $('#motie-modal').modal('hide')
+  // $('#motie-modal').form('reset')
+  $('form').trigger('reset')
+
 }
 
 // UPON UNSUCCESSFUL USE OF FEATURE

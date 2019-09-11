@@ -23,6 +23,7 @@ $(() => {
   $('#my-moties-navbar').on('click', authEvents.onSeeAllMoties)
   $('#settings-navbar').on('click', authEvents.onSeeSettings)
   $('#signout-navbar').on('click', authEvents.onSignOut)
+  $('#about-navbar').on('click', authEvents.onAbout)
 
   $('.content').on('click', '.delete-button', authEvents.onDeleteMotie)
   $('.content').on('click', '.launch-edit-modal', authEvents.onOpenModal)
@@ -33,6 +34,5 @@ $(() => {
   $('.content').hide()
   $('#imotie-navbar').hide()
   $('#sign-out').hide()
+  $('.about').hide()
 })
-
-// id="my-moties-navbar"

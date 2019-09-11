@@ -6,6 +6,8 @@
     <p>cause: {{motie.cause}}</p>
     <p>appearance: {{motie.appearance}}</p>
     <p>solution: {{motie.solution}}</p>
+    <p>created at: {{motie.created_at}}</p>
+    <p>updated at: {{motie.updated_at}}</p>
 
     <button data-id="{{motie.id}}" class="btn btn-danger delete-button">delete motie</button>
 
@@ -15,7 +17,14 @@
     edit motie
   </button>
 
-  <!-- <button data-id="{{motie.id}}" id="edit" type="button" class="btn btn-primary edit-button" data-target="#exampleModalCenter">
-    save changes
-  </button> -->
 {{/each}}
+
+<!-- <div class="card" style="width: 18rem;">
+ <img class="card-img-top" src="..." alt="Card image cap">
+ <div class="card-body">
+   <h5 data-id="{{motie.id}}" class="card-title">created at: {{motie.created_at}}</h5>
+   <h6 class="card-title">updated at: {{motie.updated_at}}</h6>
+   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   <a href="#" class="btn btn-primary">Go somewhere</a>
+ </div>
+</div> -->
