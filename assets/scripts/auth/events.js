@@ -46,6 +46,25 @@ const onSignOut = function (event) {
     .catch(ui.failure)
 }
 
+// SEE ALL SETTINGS
+const onSeeSettings = function (event) {
+  event.preventDefault()
+
+  $('.settings').show()
+  $('.content').hide()
+  $('.motie').hide()
+  $('#message').text('your settings')
+}
+
+// SEE MOTIE FORM
+const onSeeMotieForm = function (event) {
+  event.preventDefault()
+  $('.motie').show()
+  $('.settings').hide()
+  $('.content').hide()
+  $('#message').text('create a motie')
+}
+
 // SUBMIT MOTIE
 const onSubmitMotie = function (event) {
   event.preventDefault()
@@ -56,9 +75,12 @@ const onSubmitMotie = function (event) {
     .catch(ui.failure)
 }
 
-// SEE ALL MOTIES -- CURRENTLY ABLE TO SEE ALL PAST LOGINS MOTIE HISTORY. NEEDS TO CLEAR ON SIGN OUT
+// SEE ALL MOTIES
 const onSeeAllMoties = function (event) {
   event.preventDefault()
+
+  $('.settings').hide()
+  $('.motie').hide()
 
   api.seeAllMoties()
     .then(ui.seeAllMotiesSuccess)
@@ -83,6 +105,7 @@ const onEditMotie = function (event) {
   console.log('edit data', data)
 
   api.editMotie(data)
+    .then(() => onSeeAllMoties(event))
     .then(ui.editMotieSuccess)
     .catch(ui.failure)
 }
@@ -105,5 +128,7 @@ module.exports = {
   onSeeAllMoties,
   onEditMotie,
   onDeleteMotie,
-  onOpenModal
+  onOpenModal,
+  onSeeSettings,
+  onSeeMotieForm
 }

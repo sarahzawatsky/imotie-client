@@ -6,7 +6,7 @@ const seeMotiesTemplate = require('../templates/moties-listing.handlebars')
 
 // UPON SUCCESSFUL SIGN-UP
 const signUpSuccess = function (data) {
-  $('#message').text('Successfully signed up! Sign in below using your name and password.')
+  $('#message').text('successfully signed up! sign in below using your name and password.')
   $('#sign-up').trigger('reset')
 }
 
@@ -17,23 +17,25 @@ const signInSuccess = function (data) {
   $('#message').text('hello!  how are you feeling today?')
   $('.settings').show()
   $('.motie').show()
-  $('.old-moties').show()
+  $('.old-moties').hide()
   // $('.content').show()
+  $('#imotie-navbar').show()
   $('.content').hide()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('.settings').hide()
 }
 
 // UPON SUCCESSFUL PASSWORD CHANGE
 const changePasswordSuccess = function () {
   $('#change-password').trigger('reset')
-  $('#message').text('Password successfully changed!')
+  $('#message').text('password successfully changed!')
 }
 
 // UPON SUCCESSFUL SIGN-OUT
 const signOutSuccess = function () {
   store.user = null
-  $('#message').text('You have successfully signed out.')
+  $('#message').text('you have signed out')
   $('#sign-up').show()
   $('#sign-in').show()
   $('.motie').hide()
@@ -41,12 +43,13 @@ const signOutSuccess = function () {
   $('.content').hide()
   $('.content').empty()
   $('.old-moties').hide()
+  $('#imotie-navbar').hide()
 }
 
 // UPON SUCCESSFUL SUBMISSION OF MOTIE
 const submitMotieSuccess = function () {
   $('#submit-motie').trigger('reset')
-  $('#message').text('Your motie was submitted!')
+  $('#message').text('your motie was submitted!')
 }
 
 // UPON SUCCESSFUL VIEWING OF ALL MOTIES
@@ -57,7 +60,7 @@ const seeAllMotiesSuccess = function (data) {
   $('.content').append(showMotiesHtml)
   $('.content').show()
   // store.moties = data
-  // $('#message').text('your moties')
+  $('#message').text('your moties')
 }
 
 // UPON SUCCESSFUL DELETION OF A MOTIE
@@ -69,7 +72,8 @@ const deleteMotieSuccess = function () {
 // UPON SUCCESSFUL EDITING OF A MOTIE
 const editMotieSuccess = function () {
   $('#all-moties').trigger('reset')
-  $('#message').text('Here are your past moties')
+  $('#message').text('successfully edited motie')
+  $('#motie-modal').modal('hide')
 }
 
 // UPON UNSUCCESSFUL USE OF FEATURE

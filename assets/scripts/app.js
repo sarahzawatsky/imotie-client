@@ -16,9 +16,13 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 
   $('#submit-motie').on('submit', authEvents.onSubmitMotie)
-  $('#all-moties').on('submit', authEvents.onSeeAllMoties)
 
   $('#resubmit-motie').on('submit', authEvents.onEditMotie)
+
+  $('#home-navbar').on('click', authEvents.onSeeMotieForm)
+  $('#my-moties-navbar').on('click', authEvents.onSeeAllMoties)
+  $('#settings-navbar').on('click', authEvents.onSeeSettings)
+  $('#signout-navbar').on('click', authEvents.onSignOut)
 
   $('.content').on('click', '.delete-button', authEvents.onDeleteMotie)
   $('.content').on('click', '.launch-edit-modal', authEvents.onOpenModal)
@@ -27,4 +31,8 @@ $(() => {
   $('.motie').hide()
   $('.old-moties').hide()
   $('.content').hide()
+  $('#imotie-navbar').hide()
+  $('#sign-out').hide()
 })
+
+// id="my-moties-navbar"
