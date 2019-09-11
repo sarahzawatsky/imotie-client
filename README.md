@@ -28,4 +28,22 @@ Unsolved Problems:
 - Include images and colors to accentuate emotions and accomodate struggling readers and nonverbal students
 
 Planning
--
+- Started by identifying broad emotions that a student may feel in their dat-to-day
+- Used Incredible 5-Point scale to evaluate intensity, cause, appearance, and solution
+- Began by building and adjusting API
+- Developed front end by adding one feature at a time
+
+Userstories
+As a user, I want to be able to:
+- Create and access my account
+- Be greeted and asked how I am feeling
+- Select if I’m feeling Angry, Frustrated, Anxious, Worried, Sad, Miserable, Uncomfortable, Happy, Pleasant, Content, or [add my own word].
+- Select my emotional intensity from a default 5-point scale  (1-5, all good - out of control)
+- Input information to explain my emotion
+    - 1) What made me feel this way?
+    - 2) What does it look like when I feel this way?
+    - 3) What can I do to stay happy or calm down?
+- View and edit my past moties with date and time stamps.
+
+Wireframes
+[wireframes](https://i.imgur.com/egc0Q7N.jpg?2)
