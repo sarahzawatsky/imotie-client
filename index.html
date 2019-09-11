@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-    <body>
-      <h1>welcome to imotie</h1>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
-      <div id="signed-in-user"></div>
-      <div id="message"></div>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--SIGN UP FORM-->
-    <form id='sign-up' class='border'>
-      <fieldset>
-        <legend class='heading'>create a new account</legend>
-        <input type="text" name="credentials[email]" placeholder="email">
-        <input type="password" name="credentials[password]" placeholder="password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-        <input type="submit" value="sign up">
-      </fieldset>
-    </form>
+</head>
+
+<body>
+  <h1>welcome to imotie</h1>
+
+  <div id="signed-in-user"></div>
+  <div id="message"></div>
 
 
-    <!--SIGN IN FORM-->
-    <form id='sign-in' class='border'>
-      <fieldset>
-        <legend class='heading'>returning? sign in</legend>
-        <input type="text" name="credentials[email]" placeholder="email">
-        <input type="password" name="credentials[password]" placeholder="password">
-        <input type="submit" value="sign in">
-      </fieldset>
-    </form>
+  <!--SIGN UP FORM-->
+  <form id='sign-up' class='border'>
+    <fieldset>
+      <legend class='heading'>create a new account</legend>
+      <input type="text" name="credentials[email]" placeholder="email">
+      <input type="password" name="credentials[password]" placeholder="password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+      <input type="submit" value="sign up">
+    </fieldset>
+  </form>
 
 
-<!--SHOW ALL MOTIES-->
-<div class='content'></div>
+  <!--SIGN IN FORM-->
+  <form id='sign-in' class='border'>
+    <fieldset>
+      <legend class='heading'>returning? sign in</legend>
+      <input type="text" name="credentials[email]" placeholder="email">
+      <input type="password" name="credentials[password]" placeholder="password">
+      <input type="submit" value="sign in">
+    </fieldset>
+  </form>
+
+
+  <!--SHOW ALL MOTIES-->
+  <div class='content'></div>
 
 
   <!--SETTINGS CLASS-->
@@ -68,30 +75,30 @@
   </div>
 
   <!--SEE PAST MOTIES BUTTON-->
-<div class="old-moties">
+  <div class="old-moties">
 
-  <form id='all-moties' class='border'>
-    <fieldset>
-      <legend>see my moties</legend>
-      <input type="submit" value='see my moties'>
-    </fieldset>
-  </form>
+    <form id='all-moties' class='border'>
+      <fieldset>
+        <legend>see my moties</legend>
+        <input type="submit" value='see my moties'>
+      </fieldset>
+    </form>
 
-  <!-- <form id='edit-motie' class='border'>
+    <!-- <form id='edit-motie' class='border'>
     <fieldset>
       <legend>edit a motie</legend>
       <input type="submit" value='edit a motie'>
     </fieldset>
   </form> -->
 
-  <!-- <form id='delete-motie' class='border'>
+    <!-- <form id='delete-motie' class='border'>
     <fieldset>
       <legend>delete a motie</legend>
       <input type="submit" value='delete a motie'>
     </fieldset>
   </form> -->
 
-</div>
+  </div>
 
   <!-- MOTIE CLASS -->
   <div class="motie">
@@ -101,16 +108,16 @@
 
         <!--FEELINGS SELECTIONS-->
         <legend>select a word for how you're feeling</legend>
-          <input type="radio" name="moty[emotion]" value="angry"> angry
-          <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
-          <input type="radio" name="moty[emotion]" value="anxious"> anxious
-          <input type="radio" name="moty[emotion]" value="worried"> worried
-          <input type="radio" name="moty[emotion]" value="sad"> sad
-          <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
-          <input type="radio" name="moty[emotion]" value="happy"> happy
-          <input type="radio" name="moty[emotion]" value="content"> content
+        <input type="radio" name="moty[emotion]" value="angry"> angry
+        <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
+        <input type="radio" name="moty[emotion]" value="anxious"> anxious
+        <input type="radio" name="moty[emotion]" value="worried"> worried
+        <input type="radio" name="moty[emotion]" value="sad"> sad
+        <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
+        <input type="radio" name="moty[emotion]" value="happy"> happy
+        <input type="radio" name="moty[emotion]" value="content"> content
 
-    <!--SELECT INTENSITY-->
+        <!--SELECT INTENSITY-->
         <legend>how would you rate your feelings?</legend>
         <input type="radio" name="moty[intensity]" value="5">5
         <input type="radio" name="moty[intensity]" value="4">4
@@ -118,46 +125,41 @@
         <input type="radio" name="moty[intensity]" value="2">2
         <input type="radio" name="moty[intensity]" value="1">1
 
-    <!--DESCRIBE CAUSE-->
+        <!--DESCRIBE CAUSE-->
         <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
 
-    <!--DESCRIBE APPEARANCE-->
+        <!--DESCRIBE APPEARANCE-->
         <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
 
-    <!--DESCRIBE SOLUTIONS-->
+        <!--DESCRIBE SOLUTIONS-->
         <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
 
-    <!--SUBMIT MOTIE-->
-      <input type="submit">
+        <!--SUBMIT MOTIE-->
+        <input type="submit">
 
-    </fieldset>
-  </form>
-</div>
+      </fieldset>
+    </form>
+  </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
-  edit motie
-</button>
 
-<!-- EDIT MOTIE MODAL -->
-<div class="edit-modal">
+  <!-- EDIT MOTIE MODAL -->
+    <div class="modal fade" id="motie-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">edit motie</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">edit motie</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+          <div class="modal-body">
 
-        <div class="modal-body">
-          <form id='resubmit-motie' class='border'>
-            <fieldset>
-
-              <!--FEELINGS SELECTIONS-->
-              <legend>select a word for how you're feeling</legend>
+            <form id='resubmit-motie' class='border'>
+              <fieldset>
+                <input type="text" name="moty[id]" id="motie-id" hidden>
+                <!--FEELINGS SELECTIONS-->
+                <legend>select a word for how you're feeling</legend>
                 <input type="radio" name="moty[emotion]" value="angry"> angry
                 <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
                 <input type="radio" name="moty[emotion]" value="anxious"> anxious
@@ -167,36 +169,34 @@
                 <input type="radio" name="moty[emotion]" value="happy"> happy
                 <input type="radio" name="moty[emotion]" value="content"> content
 
-          <!--SELECT INTENSITY-->
-              <legend>how would you rate your feelings?</legend>
-              <input type="radio" name="moty[intensity]" value="5">5
-              <input type="radio" name="moty[intensity]" value="4">4
-              <input type="radio" name="moty[intensity]" value="3">3
-              <input type="radio" name="moty[intensity]" value="2">2
-              <input type="radio" name="moty[intensity]" value="1">1
+                <!--SELECT INTENSITY-->
+                <legend>how would you rate your feelings?</legend>
+                <input type="radio" name="moty[intensity]" value="5">5
+                <input type="radio" name="moty[intensity]" value="4">4
+                <input type="radio" name="moty[intensity]" value="3">3
+                <input type="radio" name="moty[intensity]" value="2">2
+                <input type="radio" name="moty[intensity]" value="1">1
 
-          <!--DESCRIBE CAUSE-->
-              <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
+                <!--DESCRIBE CAUSE-->
+                <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
 
-          <!--DESCRIBE APPEARANCE-->
-              <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
+                <!--DESCRIBE APPEARANCE-->
+                <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
 
-          <!--DESCRIBE SOLUTIONS-->
-              <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
+                <!--DESCRIBE SOLUTIONS-->
+                <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
 
-          </fieldset>
-        </form>
-        </div>
+                  <!-- SAVE CHANGES BUTTON -->
+                  <button type="submit" id="edit" class="btn btn-primary">Save changes</button>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+              </fieldset>
+            </form>
 
-                        <!-- THIS NEEDS TO BE UPDATE BUTTON FORM -->
-          <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
-</div>
 </body>
+
 </html>

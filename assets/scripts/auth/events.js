@@ -68,7 +68,7 @@ const onSeeAllMoties = function (event) {
 // DELETE A MOTIE
 const onDeleteMotie = (event) => {
   event.preventDefault()
-  const data = event.currentTarget.dataset
+  const data = event.target.dataset
 
   api.deleteMotie(data)
     .then(() => onSeeAllMoties(event))
@@ -79,12 +79,21 @@ const onDeleteMotie = (event) => {
 // EDIT A MOTIE
 const onEditMotie = function (event) {
   event.preventDefault()
-  const data = event.currentTarget.dataset
+  const data = getFormFields(event.target)
   console.log('edit data', data)
 
   api.editMotie(data)
     .then(ui.editMotieSuccess)
     .catch(ui.failure)
+}
+
+const onOpenModal = function (event) {
+  event.preventDefault()
+
+  const id = $(event.target).data('id')
+  console.log(id)
+  $('#motie-id').val(id)
+  $('#motie-modal').modal('show')
 }
 
 module.exports = {
@@ -95,5 +104,6 @@ module.exports = {
   onSubmitMotie,
   onSeeAllMoties,
   onEditMotie,
-  onDeleteMotie
+  onDeleteMotie,
+  onOpenModal
 }

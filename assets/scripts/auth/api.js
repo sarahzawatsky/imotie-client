@@ -71,7 +71,7 @@ const seeAllMoties = function (data) {
 // EDIT A MOTIE
 const editMotie = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/moties/' + data.id,
+    url: config.apiUrl + '/moties/' + data.moty.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

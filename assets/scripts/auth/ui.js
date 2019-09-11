@@ -2,7 +2,7 @@
 
 const store = require('../store')
 const seeMotiesTemplate = require('../templates/moties-listing.handlebars')
-// FEATURES UPON SUCCESS AND FAILURE\
+// FEATURES UPON SUCCESS AND FAILURE
 
 // UPON SUCCESSFUL SIGN-UP
 const signUpSuccess = function (data) {

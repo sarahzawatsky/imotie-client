@@ -9,11 +9,13 @@
 
     <button data-id="{{motie.id}}" class="btn btn-danger delete-button">delete motie</button>
 
-
 <!-- SAVE CHANGES BUTTON NEEDS TO ACTUALLY BE THE SUBMIT BUTTON -->
 
-  <button data-id="{{motie.id}}" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+  <button data-id="{{motie.id}}" type="button" class="btn btn-warning launch-edit-modal">
     edit motie
   </button>
 
+  <!-- <button data-id="{{motie.id}}" id="edit" type="button" class="btn btn-primary edit-button" data-target="#exampleModalCenter">
+    save changes
+  </button> -->
 {{/each}}

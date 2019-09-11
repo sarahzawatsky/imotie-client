@@ -18,10 +18,10 @@ $(() => {
   $('#submit-motie').on('submit', authEvents.onSubmitMotie)
   $('#all-moties').on('submit', authEvents.onSeeAllMoties)
 
-  // $('#edit-motie').on('submit', authEvents.onEditMotie)
+  $('#resubmit-motie').on('submit', authEvents.onEditMotie)
 
   $('.content').on('click', '.delete-button', authEvents.onDeleteMotie)
-  $('.content').on('click', '.edit-button', authEvents.onEditMotie)
+  $('.content').on('click', '.launch-edit-modal', authEvents.onOpenModal)
 
   $('.settings').hide()
   $('.motie').hide()
