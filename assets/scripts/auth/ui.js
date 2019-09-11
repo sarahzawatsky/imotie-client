@@ -78,7 +78,6 @@ const editMotieSuccess = function () {
   $('#motie-modal').modal('hide')
   // $('#motie-modal').form('reset')
   $('form').trigger('reset')
-
 }
 
 // UPON UNSUCCESSFUL USE OF FEATURE

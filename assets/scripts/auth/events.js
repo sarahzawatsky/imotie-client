@@ -125,12 +125,10 @@ const onEditMotie = function (event) {
 
 const onOpenModal = function (event) {
   event.preventDefault()
-
+  $('form').trigger('reset')
   const id = $(event.target).data('id')
-  console.log(id)
   $('#motie-id').val(id)
   $('#motie-modal').modal('show')
-  $('#motie-modal').trigger('reset')
 }
 
 // ABOUT IMOTIE
