@@ -26,6 +26,7 @@ Unsolved Problems:
 - Collapse nav bar when squished and opened
 - Display moties in bootstrap cards
 - Include images and colors to accentuate emotions and accomodate struggling readers and nonverbal students
+- Allow user to input their own emotion word
 
 Planning
 - Started by identifying broad emotions that a student may feel in their dat-to-day
