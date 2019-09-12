@@ -59,7 +59,7 @@ const submitMotieSuccess = function () {
 // UPON SUCCESSFUL VIEWING OF ALL MOTIES
 const seeAllMotiesSuccess = function (data) {
   $('.content').empty()
-  const showMotiesHtml = seeMotiesTemplate({moties: data})
+  const showMotiesHtml = seeMotiesTemplate({moties: data.moties})
   $('.content').append(showMotiesHtml)
   $('.content').show()
   // store.moties = data
