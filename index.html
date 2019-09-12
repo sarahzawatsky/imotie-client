@@ -328,49 +328,49 @@
                 <legend class="col-form-label col-sm-2 pt-0 emotion">select a word for how you're feeling</legend>
                 <div class="col-sm-10 mt-1">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios1" value="angry" checked>
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios1" value="angry" checked>
                     <label class="form-check-label" for="gridRadios1">
                       angry
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios2" value="frustrated">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios2" value="frustrated">
                     <label class="form-check-label" for="gridRadios2">
                       frustrated
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios3" value="anxious">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios3" value="anxious">
                     <label class="form-check-label" for="gridRadios3">
                       anxious
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios4" value="worried">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios4" value="worried">
                     <label class="form-check-label" for="gridRadios4">
                       worried
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios5" value="sad">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios5" value="sad">
                     <label class="form-check-label" for="gridRadios5">
                       sad
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios6" value="uncomfortable">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios6" value="uncomfortable">
                     <label class="form-check-label" for="gridRadios6">
                       uncomfortable
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios7" value="happy">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios7" value="happy">
                     <label class="form-check-label" for="gridRadios7">
                       happy
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios8" value="content">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="edit-gridRadios8" value="content">
                     <label class="form-check-label" for="gridRadios8">
                       content
                     </label>
@@ -380,31 +380,31 @@
                 <legend class="col-form-label col-sm-2 pt-0 intensity">select the intensity</legend>
                 <div class="col-sm-10 mt-1" >
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios9" value="5">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="edit-gridRadios9" value="5">
                     <label class="form-check-label" for="gridRadios9">
                       5
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios10" value="4">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="edit-gridRadios10" value="4">
                     <label class="form-check-label" for="gridRadios10">
                       4
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios11" value="3">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="edit-gridRadios11" value="3">
                     <label class="form-check-label" for="gridRadios11">
                       3
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios12" value="2">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="edit-gridRadios12" value="2">
                     <label class="form-check-label" for="gridRadios12">
                       2
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios13" value="1">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="edit-gridRadios13" value="1">
                     <label class="form-check-label" for="gridRadios13">
                       1
                     </label>
@@ -442,65 +442,6 @@
 
           </form>
         </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <!-- EDIT MOTIE MODAL -->
-  <div class="modal fade" id="motie-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">edit motie</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-
-          <form id='resubmit-motie' class='border'>
-            <fieldset>
-              <input type="text" name="moty[id]" id="motie-id" hidden>
-              <!--FEELINGS SELECTIONS-->
-              <legend>select a word for how you're feeling</legend>
-              <input type="radio" name="moty[emotion]" value="angry"> angry
-              <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
-              <input type="radio" name="moty[emotion]" value="anxious"> anxious
-              <input type="radio" name="moty[emotion]" value="worried"> worried
-              <input type="radio" name="moty[emotion]" value="sad"> sad
-              <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
-              <input type="radio" name="moty[emotion]" value="happy"> happy
-              <input type="radio" name="moty[emotion]" value="content"> content
-
-              <!--SELECT INTENSITY-->
-              <legend>how would you rate your feelings?</legend>
-              <input type="radio" name="moty[intensity]" value="5">5
-              <input type="radio" name="moty[intensity]" value="4">4
-              <input type="radio" name="moty[intensity]" value="3">3
-              <input type="radio" name="moty[intensity]" value="2">2
-              <input type="radio" name="moty[intensity]" value="1">1
-
-              <!--DESCRIBE CAUSE-->
-              <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
-
-              <!--DESCRIBE APPEARANCE-->
-              <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
-
-              <!--DESCRIBE SOLUTIONS-->
-              <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
-
-              <!-- SAVE CHANGES BUTTON -->
-              <button type="submit" id="edit" class="btn btn-primary">Save changes</button>
-
-            </fieldset>
-          </form>
-
-        </div>
-
       </div>
     </div>
   </div>
