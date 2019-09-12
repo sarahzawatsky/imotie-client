@@ -12,15 +12,16 @@
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 
 </head>
 
 <body>
 
-<!-- NAV BAR -->
+
+  <!-- NAV BAR -->
   <nav id="imotie-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">imotie</a>
     <button class="navbar-toggler" type="submit" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,49 +36,128 @@
           <a class="nav-link" href="#">my moties</a>
         </li>
         <li class="nav-item">
-          <a id="settings-navbar"class="nav-link" href="#">settings</a>
+          <a id="settings-navbar" class="nav-link" href="#">settings</a>
         </li>
         <li class="nav-item">
-          <a id="about-navbar"class="nav-link" href="#">about imotie</a>
+          <a id="about-navbar" class="nav-link" href="#">about imotie</a>
         </li>
         <li class="nav-item">
-          <a id="signout-navbar"class="nav-link" href="#">sign out</a>
+          <a id="signout-navbar" class="nav-link" href="#">sign out</a>
         </li>
       </ul>
     </div>
   </nav>
 
-<div class="welcome">
-  <h1>welcome to imotie</h1>
-  <p> empower yourself by identifying and tracking your emotions throughout the day with imotie
-</div>
+
+  <div class="welcome">
+    <h1>welcome to imotie</h1>
+    <p> empower yourself by identifying and tracking your emotions throughout the day
+  </div>
 
   <div id="signed-in-user"></div>
   <div id="message"></div>
 
 
-  <!--SIGN UP FORM-->
-  <form id='sign-up' class='border'>
-    <fieldset>
-      <legend class='heading'>create a new account</legend>
-      <input type="text" name="credentials[email]" placeholder="email">
-      <input type="password" name="credentials[password]" placeholder="password">
-      <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-      <input type="submit" value="sign up">
-    </fieldset>
-  </form>
+    <!-- SIGN UP FORM-->
+    <form id='sign-up' class='border'>
+      <fieldset>
+        <legend class='heading'>create a new account</legend>
+        <input type="text" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+        <input type="submit" value="sign up">
+      </fieldset>
+    </form>
+
+    <br><br>
 
 
-  <!--SIGN IN FORM-->
-  <form id='sign-in' class='border'>
-    <fieldset>
-      <legend class='heading'>returning? sign in</legend>
-      <input type="text" name="credentials[email]" placeholder="email">
-      <input type="password" name="credentials[password]" placeholder="password">
-      <input type="submit" value="sign in">
-    </fieldset>
-  </form>
+    <!--SIGN IN FORM-->
+    <form id='sign-in' class='border'>
+      <fieldset>
+        <legend class='heading'>returning? sign in</legend>
+        <input type="text" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="submit" value="sign in">
+      </fieldset>
+    </form>
 
+
+<!-- SIGN IN & SIGN UP -->
+<!-- <div id='register'>
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+<div id="regContainer" class="container">
+      <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+          <div class="welcome">
+            <h1>welcome to imotie</h1>
+            <p> empower yourself by identifying and tracking your emotions throughout the day with imotie
+          </div>
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="#" class="active" id="sign-in-link">Login</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" id="sign-up-link">Register</a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <form id="sign-in" action="#" method="post" role="form" style="display: block;">
+                  <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="text" name="credentials[email]" id="username" tabindex="1" class="form-control" placeholder="Email" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="credentials[password]" id="password" tabindex="2" class="form-control" placeholder="Password">
+                  </div> -->
+                  <!-- <div class="form-group text-center">
+                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                    <label for="remember"> Remember Me</label>
+                  </div> -->
+                  <!-- <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form id="sign-up" action="#" method="post" role="form" style="display: none;">
+                  <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="text" name="credentials[email]" tabindex="1" class="form-control" placeholder="Email" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="credentials[password]" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm-password">Confirm password</label>
+                    <input type="password" name="credentials[password_confirmation]" tabindex="2" class="form-control" placeholder="Confirm Password">
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
 
   <!--SHOW ALL MOTIES-->
   <div class='content'></div>
@@ -98,126 +178,335 @@
   </div>
 
 
-    <!--SIGN-OUT BUTTON-->
-    <form id='sign-out' class='border'>
-      <fieldset>
-        <legend>sign out</legend>
-        <input type="submit" value='sign out'>
-      </fieldset>
-    </form>
-
-  <!--SEE PAST MOTIES BUTTON-->
-  <div class="old-moties">
-
-    <form id='all-moties' class='border'>
-      <fieldset>
-        <legend>see my moties</legend>
-        <input type="submit" value='see my moties'>
-      </fieldset>
-    </form>
-
-  </div>
-
-  <!-- MOTIE CLASS -->
+  <!-- BOOTSTRAP FORM FOR MOTIE -->
   <div class="motie">
+    <form id="submit-motie">
+      <fieldset class="form-group">
+        <div class="row">
 
-    <form id='submit-motie' class='border'>
-      <fieldset>
+          <!--EMOTION -->
+          <legend class="col-form-label col-sm-2 pt-1 emotion">select a word for how you're feeling</legend>
+          <div class=" emotion-div col-sm-10">
+            <div class="form-check pt-1">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios1" value="angry" checked>
+              <label class="form-check-label" for="gridRadios1">
+                angry
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios2" value="frustrated">
+              <label class="form-check-label" for="gridRadios2">
+                frustrated
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios3" value="anxious">
+              <label class="form-check-label" for="gridRadios3">
+                anxious
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios4" value="worried">
+              <label class="form-check-label" for="gridRadios4">
+                worried
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios5" value="sad">
+              <label class="form-check-label" for="gridRadios5">
+                sad
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios6" value="uncomfortable">
+              <label class="form-check-label" for="gridRadios6">
+                uncomfortable
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios7" value="happy">
+              <label class="form-check-label" for="gridRadios7">
+                happy
+              </label>
+            </div>
+            <div class="form-check pb-3">
+              <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios8" value="content">
+              <label class="form-check-label" for="gridRadios8">
+                content
+              </label>
+            </div>
+          </div>
 
-        <!--FEELINGS SELECTIONS-->
-        <legend>select a word for how you're feeling</legend>
-        <input type="radio" name="moty[emotion]" value="angry"> angry
-        <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
-        <input type="radio" name="moty[emotion]" value="anxious"> anxious
-        <input type="radio" name="moty[emotion]" value="worried"> worried
-        <input type="radio" name="moty[emotion]" value="sad"> sad
-        <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
-        <input type="radio" name="moty[emotion]" value="happy"> happy
-        <input type="radio" name="moty[emotion]" value="content"> content
+          <!-- INTENSITY -->
+          <legend class="col-form-label col-sm-2 pt-3 intensity">select the intensity</legend>
+          <div class="intensity-div col-sm-10 pt-3">
+            <div class="form-check pt-3">
+              <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios9" value="5">
+              <label class="form-check-label" for="gridRadios9">
+                5
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios10" value="4">
+              <label class="form-check-label" for="gridRadios10">
+                4
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios11" value="3">
+              <label class="form-check-label" for="gridRadios11">
+                3
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios12" value="2">
+              <label class="form-check-label" for="gridRadios12">
+                2
+              </label>
+            </div>
+            <div class="form-check pb-3">
+              <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios13" value="1">
+              <label class="form-check-label" for="gridRadios13">
+                1
+              </label>
+            </div>
+          </div>
 
-        <!--SELECT INTENSITY-->
-        <legend>how would you rate your feelings?</legend>
-        <input type="radio" name="moty[intensity]" value="5">5
-        <input type="radio" name="moty[intensity]" value="4">4
-        <input type="radio" name="moty[intensity]" value="3">3
-        <input type="radio" name="moty[intensity]" value="2">2
-        <input type="radio" name="moty[intensity]" value="1">1
+          <legend class="col-form-label col-sm-2 pt-3 cause">what made me feel this way?</legend>
+          <div class="cause-div col-sm-10 motie-text">
+            <div class="form-group pt-3">
+              <textarea class="form-control" name="moty[cause]" id="cause" rows="3" placeholder="I felt this way because..."></textarea>
+            </div>
+          </div>
 
-        <!--DESCRIBE CAUSE-->
-        <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
+          <legend class="col-form-label col-sm-2 pt-0 appearance">what does it look like when I feel this way?</legend>
+          <div class="appearance-div col-sm-10 motie-text">
+            <div class="form-group">
+              <textarea class="form-control" name="moty[appearance]" id="appearance" rows="3" placeholder="when I feel this way, I usually..."></textarea>
+            </div>
+          </div>
 
-        <!--DESCRIBE APPEARANCE-->
-        <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
-
-        <!--DESCRIBE SOLUTIONS-->
-        <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
-
-        <!--SUBMIT MOTIE-->
-        <input type="submit">
-
+          <legend class="col-form-label col-sm-2 pt-0 solution">how can I stay calm or feel better?</legend>
+          <div class="solution-div col-sm-10 motie-text">
+            <div class="form-group">
+              <textarea class="form-control" name="moty[solution]" id="solution" rows="3" columns="4" placeholder="I can help myself stay calm or feel better by..."></textarea>
+            </div>
+          </div>
+        </div>
       </fieldset>
+
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <input type="submit" value="submit motie" class="btn btn-success">
+        </div>
+      </div>
     </form>
   </div>
+
+
 
 
   <!-- EDIT MOTIE MODAL -->
-    <div class="modal fade" id="motie-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">edit motie</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+  <div class="modal fade" id="motie-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">edit motie</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
+        <div class="modal-body">
+          <form id='resubmit-motie' class='border'>
+            <fieldset class="form-group">
+              <div class="row">
 
-            <form id='resubmit-motie' class='border'>
-              <fieldset>
                 <input type="text" name="moty[id]" id="motie-id" hidden>
-                <!--FEELINGS SELECTIONS-->
-                <legend>select a word for how you're feeling</legend>
-                <input type="radio" name="moty[emotion]" value="angry"> angry
-                <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
-                <input type="radio" name="moty[emotion]" value="anxious"> anxious
-                <input type="radio" name="moty[emotion]" value="worried"> worried
-                <input type="radio" name="moty[emotion]" value="sad"> sad
-                <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
-                <input type="radio" name="moty[emotion]" value="happy"> happy
-                <input type="radio" name="moty[emotion]" value="content"> content
 
-                <!--SELECT INTENSITY-->
-                <legend>how would you rate your feelings?</legend>
-                <input type="radio" name="moty[intensity]" value="5">5
-                <input type="radio" name="moty[intensity]" value="4">4
-                <input type="radio" name="moty[intensity]" value="3">3
-                <input type="radio" name="moty[intensity]" value="2">2
-                <input type="radio" name="moty[intensity]" value="1">1
+                <!--EMOTION -->
+                <legend class="col-form-label col-sm-2 pt-0 emotion">select a word for how you're feeling</legend>
+                <div class="col-sm-10 mt-1">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios1" value="angry" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                      angry
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios2" value="frustrated">
+                    <label class="form-check-label" for="gridRadios2">
+                      frustrated
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios3" value="anxious">
+                    <label class="form-check-label" for="gridRadios3">
+                      anxious
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios4" value="worried">
+                    <label class="form-check-label" for="gridRadios4">
+                      worried
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios5" value="sad">
+                    <label class="form-check-label" for="gridRadios5">
+                      sad
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios6" value="uncomfortable">
+                    <label class="form-check-label" for="gridRadios6">
+                      uncomfortable
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios7" value="happy">
+                    <label class="form-check-label" for="gridRadios7">
+                      happy
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[emotion]" id="gridRadios8" value="content">
+                    <label class="form-check-label" for="gridRadios8">
+                      content
+                    </label>
+                  </div>
+                </div>
+                <!-- INTENSITY -->
+                <legend class="col-form-label col-sm-2 pt-0 intensity">select the intensity</legend>
+                <div class="col-sm-10 mt-1" >
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios9" value="5">
+                    <label class="form-check-label" for="gridRadios9">
+                      5
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios10" value="4">
+                    <label class="form-check-label" for="gridRadios10">
+                      4
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios11" value="3">
+                    <label class="form-check-label" for="gridRadios11">
+                      3
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios12" value="2">
+                    <label class="form-check-label" for="gridRadios12">
+                      2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="moty[intensity]" id="gridRadios13" value="1">
+                    <label class="form-check-label" for="gridRadios13">
+                      1
+                    </label>
+                  </div>
+                </div>
 
-                <!--DESCRIBE CAUSE-->
-                <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
+                <legend class="col-form-label col-sm-2 pt-0 intensity">what made me feel this way?</legend>
+                <div class="col-sm-10 motie-text">
+                  <div class="form-group">
+                    <textarea class="form-control" name="moty[cause]" id="edit-cause" rows="3" placeholder="I felt this way because..."></textarea>
+                  </div>
+                </div>
 
-                <!--DESCRIBE APPEARANCE-->
-                <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
+                <legend class="col-form-label col-sm-2 pt-0 intensity">what does it look like when I feel this way?</legend>
+                <div class="col-sm-10 motie-text">
+                  <div class="form-group">
+                    <textarea class="form-control" name="moty[appearance]" id="edit-appearance" rows="3" placeholder="when I feel this way, I usually..."></textarea>
+                  </div>
+                </div>
 
-                <!--DESCRIBE SOLUTIONS-->
-                <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
+                <legend class="col-form-label col-sm-2 pt-0 intensity">how can I stay calm or feel better?</legend>
+                <div class="col-sm-10 motie-text">
+                  <div class="form-group">
+                    <textarea class="form-control" name="moty[solution]" id="edit-solution" rows="3" columns="4" placeholder="I can help myself stay calm or feel better by..."></textarea>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
 
-                  <!-- SAVE CHANGES BUTTON -->
-                  <button type="submit" id="edit" class="btn btn-primary">Save changes</button>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <input type="submit" value="submit motie" class="btn btn-success">
+              </div>
+            </div>
 
-              </fieldset>
-            </form>
-
-          </div>
-
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-<!-- MOTIE CARD -->
-<!-- <div class="card" style="width: 18rem;">
+
+
+
+  <!-- EDIT MOTIE MODAL -->
+  <div class="modal fade" id="motie-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">edit motie</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <form id='resubmit-motie' class='border'>
+            <fieldset>
+              <input type="text" name="moty[id]" id="motie-id" hidden>
+              <!--FEELINGS SELECTIONS-->
+              <legend>select a word for how you're feeling</legend>
+              <input type="radio" name="moty[emotion]" value="angry"> angry
+              <input type="radio" name="moty[emotion]" value="frustrated"> frustrated
+              <input type="radio" name="moty[emotion]" value="anxious"> anxious
+              <input type="radio" name="moty[emotion]" value="worried"> worried
+              <input type="radio" name="moty[emotion]" value="sad"> sad
+              <input type="radio" name="moty[emotion]" value="uncomfortable"> uncomfortable
+              <input type="radio" name="moty[emotion]" value="happy"> happy
+              <input type="radio" name="moty[emotion]" value="content"> content
+
+              <!--SELECT INTENSITY-->
+              <legend>how would you rate your feelings?</legend>
+              <input type="radio" name="moty[intensity]" value="5">5
+              <input type="radio" name="moty[intensity]" value="4">4
+              <input type="radio" name="moty[intensity]" value="3">3
+              <input type="radio" name="moty[intensity]" value="2">2
+              <input type="radio" name="moty[intensity]" value="1">1
+
+              <!--DESCRIBE CAUSE-->
+              <textarea name="moty[cause]" rows="10" cols="30" placeholder="what made you feel this way?"></textarea>
+
+              <!--DESCRIBE APPEARANCE-->
+              <textarea name="moty[appearance]" rows="10" cols="30" placeholder="what does it look like when you feel this way?"></textarea>
+
+              <!--DESCRIBE SOLUTIONS-->
+              <textarea name="moty[solution]" rows="10" cols="30" placeholder="what are some things you can do to feel better or stay calm?"></textarea>
+
+              <!-- SAVE CHANGES BUTTON -->
+              <button type="submit" id="edit" class="btn btn-primary">Save changes</button>
+
+            </fieldset>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MOTIE CARD -->
+  <!-- <div class="card" style="width: 18rem;">
  <img class="card-img-top" src="..." alt="Card image cap">
  <div class="card-body">
    <h5 class="card-title">Card title</h5>
@@ -227,16 +516,17 @@
 </div> -->
 
 
-<!-- ABOUT IMOTIE -->
+  <!-- ABOUT IMOTIE -->
 
-<div class="about">emotions can be pesky.  they can creep up on us at inconvenient times making it harder for us to focus, learn, and make friends.  sometimes our emotions can even cause us to get in trouble! uh-oh!
-<br><br>
-but emotions can also be powerful!  they can *help* us focus and make us *more* empathetic, allowing us to be better friends to others and most importantly, be better friends to ourselves.
-<br><br>
-when emotions creep up on us, they can quickly overwhelm us and before we know it, we may feel out of control!  learning to identify what out emotions look like, what causes them, and how intensely we feel them can help us stay in control of our minds and bodies, ultimately helping us to feel happier and more comfortable in our environments.
-<br><Br>
-so go ahead and give imotie a whirl!
- </div>
+  <div class="about">emotions can be pesky. they can creep up on us at inconvenient times making it harder for us to focus, learn, and make friends. sometimes our emotions can even cause us to get in trouble! uh-oh!
+    <br><br>
+    but emotions can also be powerful! they can *help* us focus and make us *more* empathetic, allowing us to be better friends to others and most importantly, be better friends to ourselves.
+    <br><br>
+    when emotions creep up on us, they can quickly overwhelm us and before we know it, we may feel out of control! learning to identify what out emotions look like, what causes them, and how intensely we feel them can help us stay in control of our
+    minds and bodies, ultimately helping us to feel happier and more comfortable in our environments.
+    <br><Br>
+    so go ahead and give imotie a whirl!
+  </div>
 
 
 </body>

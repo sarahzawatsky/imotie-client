@@ -1,156 +1,168 @@
 @import '~bootstrap/scss/bootstrap';
+
+// .motie-text {
+//     min-width: 0;
+//     width: auto;
+//     max-width: 70%;
+//     display: inline;
+// }
+.content {
+  background-color: rgba(255, 255, 255, .3);
+  max-width: 70%;
+  padding: 30px;
+}
+
+.welcome {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
+#sign-up {
+  background-color: rgba(255, 255, 255, .5);
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+#sign-in {
+  background-color: rgba(255, 255, 255, .5);
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.emotion-div {
+  background-color: rgba(255, 255, 255, .3);
+}
+.intensity-div {
+  background-color: rgba(255, 255, 255, .3);
+}
+.cause-div {
+  background-color: rgba(255, 255, 255, .3);
+}
+.appearance-div {
+  background-color: rgba(255, 255, 255, .3);
+}
+.solution-div {
+  background-color: rgba(255, 255, 255, .3);
+}
+#message {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+body{
+  background-color: #d6f5f5;
+  font-family: 'Mukta', sans-serif;
+}
 //
+// #regContainer{
+//     margin-top: 20%;
+// }
 //
-// @import url('https://fonts.googleapis.com/css?family=Mukta');
-// body{
-//   font-family: 'Mukta', sans-serif;
-// 	height:100vh;
-// 	min-height:550px;
-// 	background-image: url(http://www.planwallpaper.com/static/images/Free-Wallpaper-Nature-Scenes.jpg);
-// 	background-repeat: no-repeat;
-// 	background-size:cover;
-// 	background-position:center;
-// 	position:relative;
-//     overflow-y: hidden;
+// .panel-login {
+//     border-color: #ccc;
+//      background-color: #f9f8f8;
+//     -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+//     -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+//     box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 // }
-// a{
-//   text-decoration:none;
-//   color:#444444;
-// }
-// .login-reg-panel{
-//     position: relative;
-//     top: 50%;
-//     transform: translateY(-50%);
-// 	text-align:center;
-//     width:70%;
-// 	right:0;left:0;
-//     margin:auto;
-//     height:400px;
-//     background-color: rgba(236, 48, 20, 0.9);
-// }
-// .white-panel{
-//     background-color: rgba(255,255, 255, 1);
-//     height:500px;
-//     position:absolute;
-//     top:-50px;
-//     width:50%;
-//     right:calc(50% - 50px);
-//     transition:.3s ease-in-out;
-//     z-index:0;
-//     box-shadow: 0 0 15px 9px #00000096;
-// }
-// .login-reg-panel input[type="radio"]{
-//     position:relative;
-//     display:none;
-// }
-// .login-reg-panel{
-//     color:#B8B8B8;
-// }
-// .login-reg-panel #label-login,
-// .login-reg-panel #label-register{
-//     border:1px solid #9E9E9E;
-//     padding:5px 5px;
-//     width:150px;
-//     display:block;
+// .panel-login>.panel-heading {
 //     text-align:center;
-//     border-radius:10px;
-//     cursor:pointer;
-//     font-weight: 600;
-//     font-size: 18px;
 // }
-// .login-info-box{
-//     width:30%;
-//     padding:0 50px;
-//     top:20%;
-//     left:0;
-//     position:absolute;
-//     text-align:left;
-// }
-// .register-info-box{
-//     width:30%;
-//     padding:0 50px;
-//     top:20%;
-//     right:0;
-//     position:absolute;
-//     text-align:left;
-//
-// }
-// .right-log{right:50px !important;}
-//
-// .login-show,
-// .register-show{
-//     z-index: 1;
-//     display:none;
-//     opacity:0;
-//     transition:0.3s ease-in-out;
-//     color:#242424;
-//     text-align:left;
-//     padding:50px;
-// }
-// .show-log-panel{
-//     display:block;
-//     opacity:0.9;
-// }
-// .login-show input[type="text"], .login-show input[type="password"]{
-//     width: 100%;
-//     display: block;
-//     margin:20px 0;
-//     padding: 15px;
-//     border: 1px solid #b5b5b5;
-//     outline: none;
-// }
-// .login-show input[type="button"] {
-//     max-width: 150px;
-//     width: 100%;
-//     background: #444444;
-//     color: #f9f9f9;
-//     border: none;
-//     padding: 10px;
-//     text-transform: uppercase;
-//     border-radius: 2px;
-//     float:right;
-//     cursor:pointer;
-// }
-// .login-show a{
-//     display:inline-block;
-//     padding:10px 0;
-// }
-//
-// .register-show input[type="text"], .register-show input[type="password"]{
-//     width: 100%;
-//     display: block;
-//     margin:20px 0;
-//     padding: 15px;
-//     border: 1px solid #b5b5b5;
-//     outline: none;
-// }
-// .register-show input[type="button"] {
-//     max-width: 150px;
-//     width: 100%;
-//     background: #444444;
-//     color: #f9f9f9;
-//     border: none;
-//     padding: 10px;
-//     text-transform: uppercase;
-//     border-radius: 2px;
-//     float:right;
-//     cursor:pointer;
-// }
-// .credit {
-//     position:absolute;
-//     bottom:10px;
-//     left:10px;
-//     color: #3B3B25;
-//     margin: 0;
-//     padding: 0;
-//     font-family: Arial,sans-serif;
-//     text-transform: uppercase;
-//     font-size: 12px;
+// .panel-login>.panel-heading a{
+//     text-decoration: none;
 //     font-weight: bold;
-//     letter-spacing: 1px;
-//     z-index: 99;
+//     font-size: 28px;
+//     -webkit-transition: all 0.1s linear;
+//     -moz-transition: all 0.1s linear;
+//     transition: all 0.1s linear;
 // }
-// a{
-//   text-decoration:none;
-//   color:#2c7715;
+// .panel-login>.panel-heading a.active{
+//     font-size: 34px;
+// }
+// .panel-login>.panel-heading hr{
+//     margin-top: 10px;
+//     margin-bottom: 0px;
+//     clear: both;
+//     border: 0;
+//     height: 1px;
+//     background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+//     background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+//     background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+//     background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+// }
+// .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+//     height: 45px;
+//     border: 1px solid #ddd;
+//     font-size: 16px;
+//     -webkit-transition: all 0.1s linear;
+//     -moz-transition: all 0.1s linear;
+//     transition: all 0.1s linear;
+// }
+// .panel-login input:hover,
+// .panel-login input:focus {
+//     outline:none;
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none;
+//     border-color: #ccc;
+// }
+// .btn-login {
+//     background-color:#3D9DB3;
+//     outline: none;
+//     color: #fff;
+//     font-size: 14px;
+//     height: auto;
+//     font-weight: normal;
+//     padding: 14px 0;
+//     text-transform: uppercase;
+//     border-color: #2d92a9;
+// }
+// .btn-login:hover,
+// .btn-login:focus {
+//     color: #fff;
+//     background-color: #198da8;
+//     border-color: #53A3CD;
+// }
+// .btn-register {
+//     background-color: #17ae47;
+//     outline: none;
+//     color: #fff;
+//     font-size: 14px;
+//     height: auto;
+//     font-weight: normal;
+//     padding: 14px 0;
+//     text-transform: uppercase;
+//     border-color: #1CB94A;
+// }
+// .btn-register:hover,
+// .btn-register:focus {
+//     color: #fff;
+//     background-color: #1CA347;
+//     border-color: #1CA347;
+// }
+//
+// .panel-heading a{
+//     font-size: 48px;
+//     color: rgb(6, 106, 117);
+//     padding: 2px 0 10px 0;
+//     // font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+//     font-weight: bold;
+//     text-align: center;
+//     padding-bottom: 30px;
+// }
+//
+// .panel-heading a{
+//     background: -webkit-repeating-linear-gradient(-45deg,
+//     rgb(18, 83, 93) ,
+//     rgb(18, 83, 93) 20px,
+//     rgb(64, 111, 118) 20px,
+//     rgb(64, 111, 118) 40px,
+//     rgb(18, 83, 93) 40px);
+//     -webkit-text-fill-color: transparent;
+//     -webkit-background-clip: text;
 // }

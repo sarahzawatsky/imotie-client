@@ -14,7 +14,6 @@ const signUpSuccess = function (data) {
 const signInSuccess = function (data) {
   store.user = data.user
   $('#sign-in').trigger('reset')
-  $('#message').text('hello!  how are you feeling today?')
   $('.settings').show()
   $('.motie').show()
   $('.old-moties').hide()
@@ -26,6 +25,8 @@ const signInSuccess = function (data) {
   $('.settings').hide()
   $('.about').hide()
   $('.welcome').hide()
+  $('#message').text('hello!  how are you feeling today?')
+  // $('#register').hide()
 }
 
 // UPON SUCCESSFUL PASSWORD CHANGE

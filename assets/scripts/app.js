@@ -36,3 +36,20 @@ $(() => {
   $('#sign-out').hide()
   $('.about').hide()
 })
+
+$(function () {
+  $('#sign-in-link').click(function (e) {
+    $('#sign-in').delay(100).fadeIn(100)
+    $('#sign-up').fadeOut(100)
+    $('#sign-up-link').removeClass('active')
+    $(this).addClass('active')
+    e.preventDefault()
+  })
+  $('#sign-up-link').click(function (e) {
+    $('#sign-up').delay(100).fadeIn(100)
+    $('#sign-in').fadeOut(100)
+    $('#sign-in-link').removeClass('active')
+    $(this).addClass('active')
+    e.preventDefault()
+  })
+})
