@@ -54,13 +54,12 @@ const signOutSuccess = function () {
 const submitMotieSuccess = function () {
   $('#submit-motie').trigger('reset')
   $('#message').text('your motie was submitted!')
-  $('.motie').hide()
 }
 
 // UPON SUCCESSFUL VIEWING OF ALL MOTIES
 const seeAllMotiesSuccess = function (data) {
   $('.content').empty()
-  const showMotiesHtml = seeMotiesTemplate({moties: data}) // REMEMVER TO CHANGE THIS BACK TO data.moties WHEN DEPLOYGIN
+  const showMotiesHtml = seeMotiesTemplate({moties: data})
   $('.content').append(showMotiesHtml)
   $('.content').show()
   // store.moties = data

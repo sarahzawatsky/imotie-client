@@ -112,11 +112,20 @@ const onEditMotie = function (event) {
     .catch(ui.failure)
 }
 
-const onOpenModal = function (event) {
-  event.preventDefault()
+const onOpenModal = () => {
   $('form').trigger('reset')
-  const id = $(event.target).data('id')
-  $('#motie-id').val(id)
+  const currentMotie = $(event.target)
+  const emotion = currentMotie.data('emotion')
+  const intensity = currentMotie.data('intensity')
+  const cause = currentMotie.data('edit-cause')
+  const appearance = currentMotie.data('edit-appearance')
+  const solution = currentMotie.data('edit-solution')
+  $('#emotion').val(emotion)
+  $('#intensity').val(intensity)
+  $('#edit-cause').val(cause)
+  $('#edit-appearance').val(appearance)
+  $('#edit-solution').val(solution)
+  // $('#motie-id').val(id)
   $('#motie-modal').modal('show')
 }
 
